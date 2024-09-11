@@ -3,6 +3,7 @@ import './globals.css';
 import { Header } from '@/components/header';
 import { Sidebar } from '@/components/sidebar';
 import clsx from 'clsx';
+import { ClientLayout } from './client-layout';
 
 export const metadata: Metadata = {
   title: 'Create Next App',
@@ -17,19 +18,23 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className="w-screen h-dvh">
-        <Header />
-        <main className="w-full h-[calc(100%-80px)] flex ">
-          <Sidebar />
-          <section
-            className={clsx(
-              'w-full sm:w-[calc(100%-300px)] h-full',
-              'px-4 py-10 sm:px-[148px] sm:py-[60px]',
-              'bg-[#F8FBFD]'
-            )}
-          >
-            {children}
-          </section>
-        </main>
+        <ClientLayout>
+          <>
+            <Header />
+            <main className="w-full h-[calc(100%-80px)] flex ">
+              <Sidebar />
+              <section
+                className={clsx(
+                  'w-full sm:w-[calc(100%-300px)] h-full',
+                  'px-4 py-10 sm:px-[148px] sm:py-[60px]',
+                  'bg-[#F8FBFD]'
+                )}
+              >
+                {children}
+              </section>
+            </main>
+          </>
+        </ClientLayout>
       </body>
     </html>
   );
