@@ -1,3 +1,4 @@
+import { ReportItemCountOnType } from '../shared/report-item-count-on-type';
 import { ReportDetailInfo } from './report-detail-info';
 import { FetchReportResponse } from '@/types/report';
 
@@ -17,6 +18,9 @@ export function ReportDetailOnCounselor({
         grade={reportResponse.data.student.profile.grade}
         school={reportResponse.data.student.profile.school.name}
         status={reportResponse.data.student.profile.status_type}
+      />
+      <ReportItemCountOnType
+        reportItems={reportResponse.data.ec_report_items}
       />
     </div>
   );

@@ -1,5 +1,13 @@
 export type UserType = 'student' | 'counselor';
 
+export interface ReportItemInfo {
+  title: string;
+  icon: string;
+  count: number;
+}
+
+export type ItemCountOnType = Record<ReportItemType, ReportItemInfo>;
+
 export interface Counselor {
   name: string;
   email: string;
@@ -31,7 +39,7 @@ export interface Student {
   };
 }
 
-type ReportItemType =
+export type ReportItemType =
   | 'Writing Competitions'
   | 'Competitions'
   | 'Pre-college/Summer Programs'
