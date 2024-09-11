@@ -1,4 +1,5 @@
 import { ReportDetailOnCounselor } from '@/components/report-detail/counselor';
+import { SendReportToStudentForm } from '@/components/report-detail/counselor/send-report-to-student-form';
 import { fetchReport } from '@/services/report';
 import {
   dehydrate,
@@ -19,9 +20,12 @@ export default async function CounselorPage() {
   return (
     <HydrationBoundary state={dehydrate(queryClient)}>
       <div className="w-full h-full">
-        <h3>EC Report Details</h3>
+        <h3 className="mb-[30px] sm:mb-12">EC Report Details</h3>
         {reportResponse && (
-          <ReportDetailOnCounselor reportResponse={reportResponse} />
+          <div className="space-y-10">
+            <ReportDetailOnCounselor reportResponse={reportResponse} />
+            <SendReportToStudentForm />
+          </div>
         )}
         {!reportResponse && <div>no report data</div>}
       </div>
