@@ -4,7 +4,6 @@ export const client = () => {
   const instance = axios.create({
     baseURL: 'https://edu.eclab.me/api',
     headers: { 'Content-Type': 'application/json' },
-    withCredentials: true,
   });
 
   instance.interceptors.request.use(

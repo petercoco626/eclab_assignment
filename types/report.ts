@@ -1,3 +1,5 @@
+export type UserType = 'student' | 'counselor';
+
 export interface Counselor {
   name: string;
   email: string;
@@ -57,12 +59,14 @@ export interface ReportItem {
 
 // 학생이랑 상담사의 Response를 나누고 싶지만 오버프로그래밍 같음.
 export interface FetchReportResponse {
-  id: string;
-  title: string;
-  ec_report_status: string;
-  send_dt: string;
-  delivered_dt: string;
-  student: Student;
-  counselor: Counselor;
-  ec_report_items: ReportItem[];
+  data: {
+    id: string;
+    title: string;
+    ec_report_status: string;
+    send_dt: string;
+    delivered_dt: string;
+    student: Student;
+    counselor: Counselor;
+    ec_report_items: ReportItem[];
+  };
 }
