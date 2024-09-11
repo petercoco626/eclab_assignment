@@ -5,21 +5,36 @@ interface ReportItemCountInfosOnMobileProps {
   itemCountOnType: ItemCountOnType;
 }
 
+const infoWrapperOnMobileDefaultStyle =
+  'h-[64px] rounded-[10px] bg-[rgba(151,71,255,0.20)] flex items-center px-10';
+
 export function ReportItemCountInfosOnMobile({
   itemCountOnType,
 }: ReportItemCountInfosOnMobileProps) {
   return (
     <div className="sm:hidden space-y-[10px]">
-      <ReportItemCountInfo
-        reportItemInfo={itemCountOnType['Writing Competitions']}
-      />
-      <ReportItemCountInfo reportItemInfo={itemCountOnType['Competitions']} />
-      <ReportItemCountInfo
-        reportItemInfo={itemCountOnType['Pre-college/Summer Programs']}
-      />
-      <ReportItemCountInfo reportItemInfo={itemCountOnType['Internship']} />
-      <ReportItemCountInfo reportItemInfo={itemCountOnType['Volunteering']} />
-      <ReportItemCountInfo reportItemInfo={itemCountOnType['Research']} />
+      <div className={infoWrapperOnMobileDefaultStyle}>
+        <ReportItemCountInfo
+          reportItemInfo={itemCountOnType['Writing Competitions']}
+        />
+      </div>
+      <div className={infoWrapperOnMobileDefaultStyle}>
+        <ReportItemCountInfo reportItemInfo={itemCountOnType['Competitions']} />
+      </div>
+      <div className={infoWrapperOnMobileDefaultStyle}>
+        <ReportItemCountInfo
+          reportItemInfo={itemCountOnType['Pre-college/Summer Programs']}
+        />
+      </div>
+      <div className={infoWrapperOnMobileDefaultStyle}>
+        <ReportItemCountInfo reportItemInfo={itemCountOnType['Internship']} />
+      </div>
+      <div className={infoWrapperOnMobileDefaultStyle}>
+        <ReportItemCountInfo reportItemInfo={itemCountOnType['Volunteering']} />
+      </div>
+      <div className={infoWrapperOnMobileDefaultStyle}>
+        <ReportItemCountInfo reportItemInfo={itemCountOnType['Research']} />
+      </div>
     </div>
   );
 }

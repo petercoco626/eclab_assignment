@@ -4,14 +4,14 @@ export function Header() {
   return (
     <header
       className={clsx(
-        'h-20 w-full bg-slate-500',
+        'h-20 w-full bg-system-gray',
         'px-4 sm:px-10 box-border',
         'flex items-center justify-between'
       )}
     >
       <div className="flex items-center gap-[30px]">
         <IcLogo />
-        <div>EDU.CENTER</div>
+        <div className="font-medium text-white">EDU.CENTER</div>
       </div>
       <button className="hidden sm:block"></button>
     </header>

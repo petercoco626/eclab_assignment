@@ -5,7 +5,7 @@ export function Sidebar() {
   return (
     <aside
       className={clsx(
-        'w-[300px] h-full bg-yellow-300',
+        'w-[300px] h-full bg-system-gray',
         'hidden sm:block',
         'px-10 py-4 box-border'
       )}
@@ -18,7 +18,7 @@ export function Sidebar() {
             className="px-5 py-4 rounded flex items-center gap-[14px]"
           >
             <IcClipboard />
-            <span>{item.title}</span>
+            <span className="text-white font-medium">{item.title}</span>
           </Link>
         ))}
       </section>

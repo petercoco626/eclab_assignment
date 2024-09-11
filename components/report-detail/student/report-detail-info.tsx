@@ -12,7 +12,7 @@ export function ReportDetailInfo({
   receivedDate,
 }: ReportDetailInfoProps) {
   return (
-    <div className="grid grid-cols-2">
+    <div className="grid grid-cols-2 gap-10 mb-10">
       <ReportDetailItem title="Title" content={title} />
       <ReportDetailItem title="Counselor" content={counselor} />
       <ReportDetailItem title="Received Date" content={receivedDate} />

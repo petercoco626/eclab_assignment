@@ -20,7 +20,9 @@ export default async function CounselorPage() {
   return (
     <HydrationBoundary state={dehydrate(queryClient)}>
       <div className="w-full h-full">
-        <h3 className="mb-[30px] sm:mb-12">EC Report Details</h3>
+        <h3 className="mb-[30px] sm:mb-12 text-3xl font-bold">
+          EC Report Details
+        </h3>
         {reportResponse && (
           <div className="space-y-10">
             <ReportDetailOnCounselor reportResponse={reportResponse} />

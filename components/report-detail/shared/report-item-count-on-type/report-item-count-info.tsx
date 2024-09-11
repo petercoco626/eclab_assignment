@@ -6,12 +6,12 @@ export function ReportItemCountInfo({
   reportItemInfo: ReportItemInfo;
 }) {
   return (
-    <div className="flex justify-between items-center">
+    <div className="flex justify-between items-center w-full">
       <div className="flex gap-[10px]">
-        <div>{reportItemInfo.icon}</div>
-        <div>{reportItemInfo.title}</div>
+        <div className="text-base font-bold">{reportItemInfo.icon}</div>
+        <div className="text-base font-bold">{reportItemInfo.title}</div>
       </div>
-      <div>{reportItemInfo.count || '-'}</div>
+      <div className="text-base font-normal">{reportItemInfo.count || '-'}</div>
     </div>
   );
 }

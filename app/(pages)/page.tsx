@@ -19,7 +19,9 @@ export default async function Home() {
   return (
     <HydrationBoundary state={dehydrate(queryClient)}>
       <div className="w-full h-full">
-        <h3>EC Report Details</h3>
+        <h3 className="mb-[30px] sm:mb-12 text-3xl font-bold">
+          EC Report Details
+        </h3>
         {reportResponse && (
           <ReportDetailOnStudent reportResponse={reportResponse} />
         )}

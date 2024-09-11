@@ -12,8 +12,10 @@ export function ReportItemCountOnType({
   const itemCountOnType = getItemCountOnType(reportItems);
 
   return (
-    <div>
-      <div>Total : {reportItems.length}</div>
+    <div className="mb-5">
+      <div className="text-base font-bold mb-4">
+        Total : {reportItems.length}
+      </div>
       <ReportItemCountInfosOnPc itemCountOnType={itemCountOnType} />
       <ReportItemCountInfosOnMobile itemCountOnType={itemCountOnType} />
     </div>

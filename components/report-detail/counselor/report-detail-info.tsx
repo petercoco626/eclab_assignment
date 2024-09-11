@@ -22,7 +22,7 @@ export function ReportDetailInfo({
   deliveredDate,
 }: ReportDetailInfoProps) {
   return (
-    <div className="grid grid-cols-2">
+    <div className="grid grid-cols-2 gap-10 mb-10">
       <ReportDetailItem title="Title" content={title} />
       <ReportDetailItem title="Student" content={student} />
       <ReportDetailItem title="School" content={school} />

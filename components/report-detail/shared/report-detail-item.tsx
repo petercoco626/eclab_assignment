@@ -6,8 +6,8 @@ interface ReportDetailItemProps {
 export function ReportDetailItem({ title, content }: ReportDetailItemProps) {
   return (
     <div className="grid grid-cols-2">
-      <div>{title}</div>
-      <div>{content}</div>
+      <div className="text-lg font-bold">{title}</div>
+      <div className="text-lg font-normal">{content}</div>
     </div>
   );
 }
