@@ -16,6 +16,7 @@ export function ReportCard({ idx, reportItem }: ReportCardProps) {
         is_added={reportItem.is_added}
         link_url={reportItem.ec_db.url}
         title={reportItem.ec_db.name}
+        year={reportItem.ec_db.year}
       />
       <div className="w-full border-[2px] border-[#E6E9EC] border-dashed" />
       <ReportCardDetailOnPc

@@ -3,6 +3,7 @@ import Link from 'next/link';
 interface ReportCardTitleProps {
   idx: number;
   title: string;
+  year: string;
   link_url: string;
   is_added: boolean;
 }
@@ -10,6 +11,7 @@ interface ReportCardTitleProps {
 export function ReportCardTitle({
   idx,
   title,
+  year,
   link_url,
   is_added,
 }: ReportCardTitleProps) {
@@ -20,13 +22,14 @@ export function ReportCardTitle({
         <div>
           <div>{title}</div>
           <div>Young Arts</div> {/** TODO : 무슨 데이터를 써야하는건지? */}
+          <div>{year}</div>
         </div>
         <Link href={link_url}>
           <IcLink />
         </Link>
       </div>
       {/**TODO : button-design 시스템 적용해야함 */}
-      <button></button>
+      <button>{is_added ? 'already added' : 'add to EC List'}</button>
     </div>
   );
 }
