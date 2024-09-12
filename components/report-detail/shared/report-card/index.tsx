@@ -2,6 +2,7 @@ import { ReportItem } from '@/types/report';
 import { ReportCardTitle } from './report-card-title';
 import { ReportCardDetailOnPc } from './report-card-detail/report-card-detail-on-pc';
 import { ReportCardDetailOnMobile } from './report-card-detail/report-card-detail-on-mobile';
+import { ReportCardDetailButtonListOnMobile } from './report-card-detail/report-card-detail-button-list-on-mobile';
 
 interface ReportCardProps {
   idx: number;
@@ -10,15 +11,15 @@ interface ReportCardProps {
 
 export function ReportCard({ idx, reportItem }: ReportCardProps) {
   return (
-    <div>
+    <div className="w-full rounded-[10px] border border-system-light-gray sm:px-10 sm:py-7 px-5 py-5">
       <ReportCardTitle
-        idx={idx}
-        is_added={reportItem.is_added}
-        link_url={reportItem.ec_db.url}
+        idx={idx + 1}
+        isAdded={reportItem.is_added}
+        linkUrl={reportItem.ec_db.url}
         title={reportItem.ec_db.name}
         year={reportItem.ec_db.year}
       />
-      <div className="w-full border-[2px] border-[#E6E9EC] border-dashed" />
+      <div className="w-full border-[2px] border-[#E6E9EC] border-dashed mb-5" />
       <ReportCardDetailOnPc
         ageLimit={reportItem.ec_db.age_limit}
         gradeLimit={reportItem.ec_db.grade_limit}
@@ -35,6 +36,7 @@ export function ReportCard({ idx, reportItem }: ReportCardProps) {
         recognitionLevel={reportItem.ec_db.recognition_level}
         reportItemType={reportItem.ec_db.ec_type}
       />
+      <ReportCardDetailButtonListOnMobile isAdded={reportItem.is_added} />
     </div>
   );
 }

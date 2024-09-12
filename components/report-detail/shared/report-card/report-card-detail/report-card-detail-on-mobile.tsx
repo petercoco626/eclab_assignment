@@ -32,7 +32,7 @@ export function ReportCardDetailOnMobile({
       <ReportCardDetailItem
         icon={<IcFilter />}
         title="Participation"
-        content={participateWay.join(',')}
+        content={participateWay.join(', ')}
       />
       <ReportCardDetailItem
         icon={<IcFilter />}
@@ -47,12 +47,12 @@ export function ReportCardDetailOnMobile({
       <ReportCardDetailItem
         icon={<IcAddCheck />}
         title="Grade"
-        content={gradeLimit.join(',')}
+        content={gradeLimit.join(', ')}
       />
       <ReportCardDetailItem
         icon={<IcAddCheck />}
         title="Age"
-        content={ageLimit.join(',')}
+        content={ageLimit.join(', ')}
       />
     </div>
   );

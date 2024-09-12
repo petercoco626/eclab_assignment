@@ -9,7 +9,7 @@ export function ReportDetailOnCounselor({
   reportResponse: FetchReportResponse;
 }) {
   return (
-    <div>
+    <div className="sm:p-10 sm:bg-white sm:rounded-[20px]">
       <ReportDetailInfo
         counselor={reportResponse.data.counselor.name}
         receivedDate={reportResponse.data.send_dt}

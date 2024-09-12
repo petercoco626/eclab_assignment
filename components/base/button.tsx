@@ -22,7 +22,7 @@ export const Button = ({
   ...props
 }: ButtonProps) => {
   const defaultButtonStyle = clsx(
-    'flex items-center justify-center box-border border font-bold',
+    'flex items-center justify-center box-border border font-bold px-5',
     isRounded && 'rounded-[10px]'
   );
 
@@ -34,8 +34,7 @@ export const Button = ({
 
   const styleOnVariant: Record<ButtonVariant, string> = {
     primary: 'bg-system-purple border-transparent text-white',
-    secondary:
-      'bg-system-purple border-system-purple text-white text-system-purple',
+    secondary: 'border-system-purple text-system-purple',
     tertiary: 'bg-system-gray border-transparent text-white',
   };
 

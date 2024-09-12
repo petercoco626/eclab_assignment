@@ -24,30 +24,30 @@ export function ReportCardDetailOnPc({
 }: ReportCardDetailOnPcProps) {
   return (
     <div className="hidden sm:block space-y-[18px]">
-      <div>
+      <div className="flex items-center gap-1">
         <ReportCardDetailItem
           icon={<IcFilter />}
           title="Type"
           content={reportItemType}
         />
-        <div />
+        <div className="text-base font-bold">•</div>
         <ReportCardDetailItem
           title="Participation"
-          content={participateWay.join(',')}
+          content={participateWay.join(', ')}
         />
-        <div />
+        <div className="text-base font-bold">•</div>
         <ReportCardDetailItem title="Recognition" content={recognitionLevel} />
       </div>
-      <div>
+      <div className="flex items-center gap-1">
         <ReportCardDetailItem
           icon={<IcAddCheck />}
           title="Nationality"
           content={nationality}
         />
-        <div />
-        <ReportCardDetailItem title="Grade" content={gradeLimit.join(',')} />
-        <div />
-        <ReportCardDetailItem title="Age" content={ageLimit.join(',')} />
+        <div className="text-base font-bold">•</div>
+        <ReportCardDetailItem title="Grade" content={gradeLimit.join(', ')} />
+        <div className="text-base font-bold">•</div>
+        <ReportCardDetailItem title="Age" content={ageLimit.join(', ')} />
       </div>
     </div>
   );

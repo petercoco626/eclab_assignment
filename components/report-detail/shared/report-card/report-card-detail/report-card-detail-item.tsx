@@ -1,3 +1,4 @@
+import clsx from 'clsx';
 import { ReactNode } from 'react';
 
 interface ReportCardDetailItemProps {
@@ -12,10 +13,12 @@ export function ReportCardDetailItem({
   content,
 }: ReportCardDetailItemProps) {
   return (
-    <div>
+    <div className="flex items-center">
       {icon && icon}
-      <div>{title}:</div>
-      <div>{content}</div>
+      <div className={clsx('text-base font-bold', icon && 'ml-[10px] sm:ml-4')}>
+        {title}:
+      </div>
+      <div className="text-base font-normal ml-1">{content}</div>
     </div>
   );
 }
