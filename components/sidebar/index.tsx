@@ -4,6 +4,7 @@ import clsx from 'clsx';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import IcClipboard from '@/assets/icons/ic-clipboard.svg';
+import { Pathname } from '@/libs/path';
 
 export function Sidebar() {
   const currentPath = usePathname();
@@ -52,10 +53,10 @@ const sidebarItems: {
 }[] = [
   {
     title: 'EC Report_STU',
-    href: '/',
+    href: Pathname.HOME,
   },
   {
     title: 'EC Report_CON',
-    href: '/counselor',
+    href: Pathname.COUNSELOR,
   },
 ];

@@ -1,10 +1,11 @@
 import clsx from 'clsx';
+import { HamburgerMenu } from './hamburger-menu';
 
 export function Header() {
   return (
     <header
       className={clsx(
-        'h-20 w-full bg-system-gray',
+        'h-[55px] sm:h-20 w-full bg-system-gray',
         'px-4 sm:px-10 box-border',
         'flex items-center justify-between'
       )}
@@ -13,7 +14,7 @@ export function Header() {
         <IcLogo />
         <div className="font-medium text-white">EDU.CENTER</div>
       </div>
-      <button className="hidden sm:block"></button>
+      <HamburgerMenu />
     </header>
   );
 }
