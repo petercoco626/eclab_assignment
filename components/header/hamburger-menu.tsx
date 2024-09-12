@@ -19,7 +19,7 @@ export function HamburgerMenu() {
         </button>
       </div>
       {isDrawerOpen && (
-        <section className="sm:hidden w-full h-[calc(100%-55px)] absolute top-[55px] left-0 z-20 bg-[#3B3A48]/60 ">
+        <section className="sm:hidden w-full h-[calc(100%-55px)] absolute top-[55px] left-0 z-20 bg-[#3B3A48]/60">
           <div className="h-[130px] w-full bg-system-gray rounded-b-xl">
             {drawerItems.map((item) => (
               <Link
@@ -43,7 +43,7 @@ export function HamburgerMenu() {
               </Link>
             ))}
           </div>
-          <div className="w-full h-[calc(100%-130px)] blur-md" />
+          <div className="w-full h-[calc(100%-130px)] backdrop-blur-sm" />
         </section>
       )}
     </>
