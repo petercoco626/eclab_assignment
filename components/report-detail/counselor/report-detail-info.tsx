@@ -3,7 +3,7 @@
 import clsx from 'clsx';
 import { ReportDetailItem } from '../shared/report-detail-item';
 import { formatDate } from '@/libs/utils';
-import { useFetchReport } from '@/hooks/useFetchReport';
+import { useFetchReport } from '@/hooks/query/use-fetch-report';
 
 export function ReportDetailInfo() {
   const { data: reportResponse } = useFetchReport();

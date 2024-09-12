@@ -1,6 +1,6 @@
 'use client';
 
-import { useFetchReport } from '@/hooks/useFetchReport';
+import { useFetchReport } from '@/hooks/query/use-fetch-report';
 import { ReportCard } from '.';
 
 export function ReportCardList() {

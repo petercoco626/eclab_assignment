@@ -1,6 +1,11 @@
+'use client';
+
 import { Button } from '@/components/base/button';
+import { useToggle } from '@/hooks/use-toggle';
 
 export function SendReportToStudentForm() {
+  const { toggle, handleToggle } = useToggle();
+
   return (
     <div className="space-y-6 pb-0 lg:pb-10">
       <p className="text-center text-base font-medium">
@@ -8,7 +13,13 @@ export function SendReportToStudentForm() {
         solely responsible for any incorrections in the report.
       </p>
       <div className="flex justify-center items-center gap-2">
-        <IcCheckedBox />
+        <button type="button" onClick={handleToggle}>
+          {toggle ? (
+            <IcCheckedBox />
+          ) : (
+            <div className="border border-system-gray bg-transparent w-[21px] h-[21px] rounded" />
+          )}
+        </button>
         <p className="text-center text-base font-medium">
           I agree to the above.
         </p>

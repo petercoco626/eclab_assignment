@@ -3,7 +3,7 @@
 import { ItemCountOnType, ReportItem } from '@/types/report';
 import { ReportItemCountInfosOnMobile } from './report-item-count-info-on-mobile';
 import { ReportItemCountInfosOnPc } from './report-item-count-info-on-pc';
-import { useFetchReport } from '@/hooks/useFetchReport';
+import { useFetchReport } from '@/hooks/query/use-fetch-report';
 
 export function ReportItemCountOnType() {
   const { data: reportResponse } = useFetchReport();

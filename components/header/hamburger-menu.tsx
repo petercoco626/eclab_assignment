@@ -1,20 +1,24 @@
 'use client';
 
+import { useToggle } from '@/hooks/use-toggle';
 import { Pathname } from '@/libs/path';
 import clsx from 'clsx';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { useState } from 'react';
 
 export function HamburgerMenu() {
-  const [isDrawerOpen, setIsDrawerOpen] = useState(false);
+  const {
+    toggle: isDrawerOpen,
+    handleToggle: drawerToggle,
+    handleToggleOff: closeDrawer,
+  } = useToggle();
 
   const currentPath = usePathname();
 
   return (
     <>
       <div className="lg:hidden">
-        <button type="button" onClick={() => setIsDrawerOpen((pre) => !pre)}>
+        <button type="button" onClick={drawerToggle}>
           {isDrawerOpen ? <IcCancel /> : <IcHamburger />}
         </button>
       </div>
@@ -31,7 +35,7 @@ export function HamburgerMenu() {
                     ? 'bg-system-purple'
                     : 'bg-transparent'
                 )}
-                onClick={() => setIsDrawerOpen(false)}
+                onClick={closeDrawer}
               >
                 <span
                   className={clsx(
