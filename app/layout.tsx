@@ -22,7 +22,7 @@ export default function RootLayout({
         <ClientLayout>
           <>
             <Header />
-            <main className="w-full h-[calc(100%-80px)] flex ">
+            <main className="w-full h-[calc(100%-55px)] lg:h-[calc(100%-80px)] flex ">
               <Sidebar />
               <section
                 className={clsx(

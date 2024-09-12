@@ -13,7 +13,7 @@ export default async function Home() {
 
   await queryClient.prefetchQuery({
     queryKey: ['report'],
-    queryFn: () => Promise.resolve(reportResponse),
+    queryFn: fetchReport,
   });
 
   return (
@@ -22,9 +22,7 @@ export default async function Home() {
         <h3 className="mb-[30px] lg:mb-12 text-3xl font-bold">
           EC Report Details
         </h3>
-        {reportResponse && (
-          <ReportDetailOnStudent reportResponse={reportResponse} />
-        )}
+        {reportResponse && <ReportDetailOnStudent />}
         {!reportResponse && <div>no report data</div>}
       </div>
     </HydrationBoundary>

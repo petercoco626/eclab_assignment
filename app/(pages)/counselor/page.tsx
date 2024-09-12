@@ -24,9 +24,7 @@ export default async function CounselorPage() {
           <h3 className="mb-[30px] lg:mb-12 text-3xl font-bold">
             EC Report Details
           </h3>
-          {reportResponse && (
-            <ReportDetailOnCounselor reportResponse={reportResponse} />
-          )}
+          {reportResponse && <ReportDetailOnCounselor />}
           {!reportResponse && <div>no report data</div>}
         </div>
         <SendReportToStudentForm />

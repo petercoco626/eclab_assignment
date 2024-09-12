@@ -31,6 +31,7 @@ export function HamburgerMenu() {
                     ? 'bg-system-purple'
                     : 'bg-transparent'
                 )}
+                onClick={() => setIsDrawerOpen(false)}
               >
                 <span
                   className={clsx(

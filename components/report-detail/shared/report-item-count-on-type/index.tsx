@@ -1,20 +1,21 @@
+'use client';
+
 import { ItemCountOnType, ReportItem } from '@/types/report';
 import { ReportItemCountInfosOnMobile } from './report-item-count-info-on-mobile';
 import { ReportItemCountInfosOnPc } from './report-item-count-info-on-pc';
+import { useFetchReport } from '@/hooks/useFetchReport';
 
-interface ReportItemCountOnTypeProps {
-  reportItems: ReportItem[];
-}
+export function ReportItemCountOnType() {
+  const { data: reportResponse } = useFetchReport();
 
-export function ReportItemCountOnType({
-  reportItems,
-}: ReportItemCountOnTypeProps) {
-  const itemCountOnType = getItemCountOnType(reportItems);
+  const itemCountOnType = getItemCountOnType(
+    reportResponse.data.ec_report_items
+  );
 
   return (
     <div className="mb-5">
       <div className="text-base font-bold mb-4">
-        Total : {reportItems.length}
+        Total : {reportResponse.data.ec_report_items.length}
       </div>
       <ReportItemCountInfosOnPc itemCountOnType={itemCountOnType} />
       <ReportItemCountInfosOnMobile itemCountOnType={itemCountOnType} />

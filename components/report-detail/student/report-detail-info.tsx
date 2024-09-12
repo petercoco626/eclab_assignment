@@ -1,17 +1,13 @@
+'use client';
+
 import clsx from 'clsx';
 import { ReportDetailItem } from '../shared/report-detail-item';
+import { useFetchReport } from '@/hooks/useFetchReport';
+import { formatDate } from '@/libs/utils';
 
-interface ReportDetailInfoProps {
-  title: string;
-  counselor: string;
-  receivedDate: string;
-}
+export function ReportDetailInfo() {
+  const { data: reportResponse } = useFetchReport();
 
-export function ReportDetailInfo({
-  title,
-  counselor,
-  receivedDate,
-}: ReportDetailInfoProps) {
   return (
     <div
       className={clsx(
@@ -19,9 +15,15 @@ export function ReportDetailInfo({
         'p-5 bg-white border border-system-light-gray rounded-[10px] lg:p-0 lg:bg-transparent lg:border-none'
       )}
     >
-      <ReportDetailItem title="Title" content={title} />
-      <ReportDetailItem title="Counselor" content={counselor} />
-      <ReportDetailItem title="Received Date" content={receivedDate} />
+      <ReportDetailItem
+        title="Title"
+        content={reportResponse.data.counselor.name}
+      />
+      <ReportDetailItem title="Counselor" content={reportResponse.data.title} />
+      <ReportDetailItem
+        title="Received Date"
+        content={formatDate(reportResponse.data.send_dt)}
+      />
     </div>
   );
 }

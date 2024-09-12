@@ -1,29 +1,13 @@
-import { formatDate } from '@/libs/utils';
-import { ReportCard } from '../shared/report-card';
+import { ReportCardList } from '../shared/report-card/report-card-list';
 import { ReportItemCountOnType } from '../shared/report-item-count-on-type';
 import { ReportDetailInfo } from './report-detail-info';
-import { FetchReportResponse } from '@/types/report';
 
-export function ReportDetailOnStudent({
-  reportResponse,
-}: {
-  reportResponse: FetchReportResponse;
-}) {
+export function ReportDetailOnStudent() {
   return (
     <div className="lg:p-10 lg:bg-white lg:rounded-[20px] max-w-[1024px]">
-      <ReportDetailInfo
-        counselor={reportResponse.data.counselor.name}
-        receivedDate={formatDate(reportResponse.data.send_dt)}
-        title={reportResponse.data.title}
-      />
-      <ReportItemCountOnType
-        reportItems={reportResponse.data.ec_report_items}
-      />
-      <div className="space-y-5">
-        {reportResponse.data.ec_report_items.map((reportItem, idx) => (
-          <ReportCard key={reportItem.id} idx={idx} reportItem={reportItem} />
-        ))}
-      </div>
+      <ReportDetailInfo />
+      <ReportItemCountOnType />
+      <ReportCardList />
     </div>
   );
 }
