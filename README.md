@@ -5,6 +5,7 @@
 - 상태관리 : react-query
 - 언어 : Typescript
 - Framework : Next.js(App Router)
+- 스타일링 : tailwindcss
 
 ## 2. 설치하기
 
