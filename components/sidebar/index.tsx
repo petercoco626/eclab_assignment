@@ -13,7 +13,7 @@ export function Sidebar() {
     <aside
       className={clsx(
         'w-[300px] h-full bg-system-gray',
-        'hidden sm:block',
+        'hidden lg:block',
         'px-10 py-4 box-border'
       )}
     >

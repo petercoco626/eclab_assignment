@@ -11,7 +11,7 @@ interface ReportCardProps {
 
 export function ReportCard({ idx, reportItem }: ReportCardProps) {
   return (
-    <div className="w-full rounded-[10px] border border-system-light-gray sm:px-10 sm:py-7 px-5 py-5">
+    <div className="w-full rounded-[10px] border border-system-light-gray lg:px-10 lg:py-7 px-5 py-5">
       <ReportCardTitle
         idx={idx + 1}
         isAdded={reportItem.is_added}

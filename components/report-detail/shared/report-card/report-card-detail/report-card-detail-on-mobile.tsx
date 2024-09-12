@@ -23,7 +23,7 @@ export function ReportCardDetailOnMobile({
   reportItemType,
 }: ReportCardDetailOnMobileProps) {
   return (
-    <div className="space-y-5 sm:hidden">
+    <div className="space-y-5 lg:hidden">
       <ReportCardDetailItem
         icon={<IcFilter />}
         title="Type"

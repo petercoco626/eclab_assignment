@@ -2,7 +2,7 @@ import { Button } from '@/components/base/button';
 
 export function SendReportToStudentForm() {
   return (
-    <div className="space-y-6">
+    <div className="space-y-6 pb-0 lg:pb-10">
       <p className="text-center text-base font-medium">
         Once sent, the report is final and cannot be retrieved. The counselor is
         solely responsible for any incorrections in the report.
@@ -16,14 +16,14 @@ export function SendReportToStudentForm() {
       <Button
         variant="tertiary"
         size="large"
-        className="hidden sm:block sm:w-[240px] mx-auto"
+        className="hidden lg:block lg:w-[240px] mx-auto"
       >
         Sent to Student
       </Button>
       <Button
         variant="tertiary"
         size="large"
-        className="w-full sm:hidden"
+        className="w-full lg:hidden"
         isRounded={false}
       >
         Sent to Student

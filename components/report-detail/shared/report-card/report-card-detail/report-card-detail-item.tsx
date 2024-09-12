@@ -15,7 +15,7 @@ export function ReportCardDetailItem({
   return (
     <div className="flex items-center">
       {icon && icon}
-      <div className={clsx('text-base font-bold', icon && 'ml-[10px] sm:ml-4')}>
+      <div className={clsx('text-base font-bold', icon && 'ml-[10px] lg:ml-4')}>
         {title}:
       </div>
       <div className="text-base font-normal ml-1">{content}</div>

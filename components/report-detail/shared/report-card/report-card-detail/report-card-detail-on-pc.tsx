@@ -23,7 +23,7 @@ export function ReportCardDetailOnPc({
   reportItemType,
 }: ReportCardDetailOnPcProps) {
   return (
-    <div className="hidden sm:block space-y-[18px]">
+    <div className="hidden lg:block space-y-[18px]">
       <div className="flex items-center gap-1">
         <ReportCardDetailItem
           icon={<IcFilter />}

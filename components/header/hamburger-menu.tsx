@@ -13,13 +13,13 @@ export function HamburgerMenu() {
 
   return (
     <>
-      <div className="sm:hidden">
+      <div className="lg:hidden">
         <button type="button" onClick={() => setIsDrawerOpen((pre) => !pre)}>
           {isDrawerOpen ? <IcCancel /> : <IcHamburger />}
         </button>
       </div>
       {isDrawerOpen && (
-        <section className="sm:hidden w-full h-[calc(100%-55px)] absolute top-[55px] left-0 z-20 bg-[#3B3A48]/60">
+        <section className="lg:hidden w-full h-[calc(100%-55px)] absolute top-[55px] left-0 z-20 bg-[#3B3A48]/60">
           <div className="h-[130px] w-full bg-system-gray rounded-b-xl">
             {drawerItems.map((item) => (
               <Link

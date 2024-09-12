@@ -15,8 +15,8 @@ export function ReportDetailInfo({
   return (
     <div
       className={clsx(
-        'grid grid-cols-1 gap-5 sm:grid-cols-2 sm:gap-10 mb-10',
-        'p-5 bg-white border border-system-light-gray rounded-[10px] sm:p-0 sm:bg-transparent sm:border-none'
+        'grid grid-cols-1 gap-5 lg:grid-cols-2 lg:gap-10 mb-10',
+        'p-5 bg-white border border-system-light-gray rounded-[10px] lg:p-0 lg:bg-transparent lg:border-none'
       )}
     >
       <ReportDetailItem title="Title" content={title} />

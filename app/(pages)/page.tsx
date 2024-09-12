@@ -18,8 +18,8 @@ export default async function Home() {
 
   return (
     <HydrationBoundary state={dehydrate(queryClient)}>
-      <div className="w-full h-full">
-        <h3 className="mb-[30px] sm:mb-12 text-3xl font-bold">
+      <div className="w-full h-full px-4 py-10 lg:px-[148px] lg:py-[60px] box-border">
+        <h3 className="mb-[30px] lg:mb-12 text-3xl font-bold">
           EC Report Details
         </h3>
         {reportResponse && (

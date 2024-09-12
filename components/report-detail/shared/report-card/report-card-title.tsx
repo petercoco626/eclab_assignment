@@ -47,13 +47,13 @@ export function ReportCardTitle({
             </span>
           )}
         </div>
-        <Link href={linkUrl} className="hidden sm:block">
+        <Link href={linkUrl} className="hidden lg:block">
           <IcLink className="stroke-[#111827]" />
         </Link>
       </div>
       {isStudentPage && (
         <Button
-          className="hidden sm:block"
+          className="hidden lg:block"
           size="small"
           variant={isAdded ? 'secondary' : 'primary'}
         >

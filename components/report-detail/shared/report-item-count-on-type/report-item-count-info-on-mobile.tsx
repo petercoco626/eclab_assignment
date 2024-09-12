@@ -12,7 +12,7 @@ export function ReportItemCountInfosOnMobile({
   itemCountOnType,
 }: ReportItemCountInfosOnMobileProps) {
   return (
-    <div className="sm:hidden space-y-[10px]">
+    <div className="lg:hidden space-y-[10px]">
       <div className={infoWrapperOnMobileDefaultStyle}>
         <ReportItemCountInfo
           reportItemInfo={itemCountOnType['Writing Competitions']}

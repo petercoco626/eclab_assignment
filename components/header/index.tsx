@@ -5,8 +5,8 @@ export function Header() {
   return (
     <header
       className={clsx(
-        'h-[55px] sm:h-20 w-full bg-system-gray',
-        'px-4 sm:px-10 box-border',
+        'h-[55px] lg:h-20 w-full bg-system-gray',
+        'px-4 lg:px-10 box-border',
         'flex items-center justify-between'
       )}
     >

@@ -19,7 +19,7 @@ export function ReportCardDetailButtonListOnMobile({
   return (
     <div
       className={clsx(
-        'sm:hidden mt-[30px] grid gap-[10px]',
+        'lg:hidden mt-[30px] grid gap-[10px]',
         isStudentPage ? 'grid-cols-2' : 'grid-cols-1'
       )}
     >
