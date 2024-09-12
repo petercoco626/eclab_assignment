@@ -8,7 +8,7 @@ export function SendReportToStudentForm() {
 
   return (
     <div className="space-y-6 pb-0 lg:pb-10">
-      <p className="text-center text-base font-medium">
+      <p className="text-center text-base font-medium max-w-[500px] 2xl:max-w-full mx-auto">
         Once sent, the report is final and cannot be retrieved. The counselor is
         solely responsible for any incorrections in the report.
       </p>

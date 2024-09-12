@@ -18,12 +18,14 @@ export default async function Home() {
 
   return (
     <HydrationBoundary state={dehydrate(queryClient)}>
-      <div className="w-full h-full px-4 py-10 2xl:px-[148px] lg:py-[60px] box-border">
-        <h3 className="mb-[30px] lg:mb-12 text-3xl font-bold">
-          EC Report Details
-        </h3>
-        {reportResponse && <ReportDetailOnStudent />}
-        {!reportResponse && <div>no report data</div>}
+      <div className="w-full h-full px-4 py-10 lg:px-10 2xl:px-[148px] lg:py-[60px] box-border">
+        <div className="pb-10">
+          <h3 className="mb-[30px] lg:mb-12 text-3xl font-bold">
+            EC Report Details
+          </h3>
+          {reportResponse && <ReportDetailOnStudent />}
+          {!reportResponse && <div>no report data</div>}
+        </div>
       </div>
     </HydrationBoundary>
   );
