@@ -13,7 +13,7 @@ export function ReportItemCountInfosOnPc({
     <div
       className={clsx(
         'hidden lg:flex bg-[rgba(151,71,255,0.20)] rounded-[10px]',
-        'px-10 py-4 box-border h-[98px]',
+        'px-5 2xl:px-10 py-4 box-border h-[98px]',
         'grid grid-cols-5 items-center gap-3'
       )}
     >

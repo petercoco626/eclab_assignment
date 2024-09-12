@@ -6,7 +6,7 @@ interface ReportItemCountInfosOnMobileProps {
 }
 
 const infoWrapperOnMobileDefaultStyle =
-  'h-[64px] rounded-[10px] bg-[rgba(151,71,255,0.20)] flex items-center px-10';
+  'h-[64px] rounded-[10px] bg-[rgba(151,71,255,0.20)] flex items-center px-5';
 
 export function ReportItemCountInfosOnMobile({
   itemCountOnType,
